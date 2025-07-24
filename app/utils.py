@@ -5,11 +5,10 @@ import matplotlib
 matplotlib.use('Agg') # Use non-interactive backend for server environments
 import matplotlib.pyplot as plt
 import io
-import logging
+from app.logger_config import logger
 
 from app.config import settings
 
-logger = logging.getLogger(__name__)
 
 def generate_image(
     csv_path: str = settings.DATA_CSV_PATH,
